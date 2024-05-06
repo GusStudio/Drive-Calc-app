@@ -1,2 +1,2 @@
-# drive-calc
+# [Drive|Calc]
 [Drive|Calc]
