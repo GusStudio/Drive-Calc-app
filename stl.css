@@ -1,0 +1,367 @@
+/* Estilos globais */
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-size: 100%;
+	font-family: "Poppins", sans-serif;
+	/* 	color: #333; */
+}
+a {
+	text-decoration: none;
+  
+}
+
+html {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	scroll-behavior: smooth;
+}
+
+
+body {
+  height: 100%;
+	width: 100%;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+  color: #333; /* Cor padrão do texto */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves para modo escuro */
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Modo Escuro */
+body.dark-mode {
+  background-color: #333; /* Cor de fundo no modo escuro */
+  color: #fff; /* Cor do texto no modo escuro */
+}
+
+/* Barra de Navegação */
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+nav h1 {
+  margin: 0;
+}
+nav h1 a{
+  color: #fff;
+  display: block;
+  font-size: xx-large;
+}
+/* Rodapé */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Container principal */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sessões */
+.section {
+  margin-bottom: 20px;
+  background-color: #eee;
+  padding: 20px;
+  border-radius: 10px;
+}
+.section h2 {
+  margin-top: 0;
+}
+.section ul {
+  padding-left: 20px;
+}
+.section li {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+.section li:before {
+  content: "•"; /* Adiciona marcador de lista */
+  margin-right: 5px;
+  color: #333;
+}
+.section p {
+  margin: 10px 0;
+}
+
+.section p strong {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+/* Botão */
+.btn {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn:hover {
+  background-color: #555;
+}
+
+/* Recursos */
+.section ul {
+  padding-left: 0; /* Remover o padding padrão */
+  list-style-type: none; /* Remover o estilo padrão de lista */
+}
+
+.section li {
+  margin-bottom: 20px; /* Aumentar o espaço entre os itens */
+  font-weight: bold;
+  margin: 20px 0;
+  font-weight: bold;
+  border-top: 1px solid black;
+}
+
+.section li:before {
+  content: ""; /* Remover o marcador de lista */
+  display: inline-block; /* Alinhar o ícone com o texto */
+  width: 1em; /* Definir a largura do ícone */
+  height: 1em; /* Definir a altura do ícone */
+  margin-right: 5px; /* Espaçamento entre o ícone e o texto */
+}
+
+.section li i {
+  font-style: normal; /* Remover o estilo itálico padrão */
+  font-weight: normal; /* Definir o estilo em negrito */
+  color: #333; /* Cor do ícone */
+  font-size: small;
+}
+
+.section li p {
+  margin: 5px 0; /* Reduzir o espaçamento entre os parágrafos */
+  font-size: 14px; /* Reduzir o tamanho da fonte */
+  color: #666; /* Cor do texto */
+  font-style: italic; /* Definir o estilo itálico para a descrição */
+}
+
+/* Testemunhos */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.chat-bubble {
+  max-width: 70%;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 20px;
+  background-color: #333; /* Fundo do balão de chat */
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.chat-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 20px; /* Posição da ponta do balão */
+  border-style: solid;
+  border-width: 0 15px 15px 15px;
+  border-color: transparent transparent transparent #333;
+  display: block;
+  width: 0;
+  z-index: 1;
+}
+
+.chat-bubble.left {
+  background-color: #555; /* Fundo do balão de chat à esquerda */
+  align-self: flex-start;
+}
+
+.chat-bubble.left::after {
+  right: 20px; /* Posição da ponta do balão */
+  left: auto;
+  border-width: 0 15px 15px 0;
+  border-color: transparent #555 transparent transparent;
+}
+
+.chat-bubble p {
+  margin: 0;
+}
+
+.chat-bubble strong {
+  font-weight: bold;
+  color: #fff;
+}
+
+.chat-info {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 5px;
+  align-self: flex-end; /* Alinha a hora à direita */
+}
+
+/* Sessão Hero */
+.hero {
+  text-align: center;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 525.5%;
+  background: linear-gradient(45deg,#4158D0 0%,#C850c0 46%,#FFCC70 100%);
+    background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  position: absolute;
+  top: 30%;
+  left: 22%;
+  transform: translate(-2%, -6%);
+  text-align: center;
+  display: block;
+}
+
+.hero p {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.hero img {
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.hero button.btn {
+  font-size: 1.2em;
+  padding: 15px 30px;
+  border-radius: 30px;
+  background-color: #007bff; /* Cor azul petróleo */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero button.btn:hover {
+  background-color: #0056b3; /* Tom mais escuro do azul petróleo */
+}
+
+.section_phone {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  width: 300px; /* Width of the card */
+  height: 500px; /* Height of the card */
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+video {
+  /* background-image: url(http://localhost/[Drive-Calc]/core/iphone.png); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 622px;
+}
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (9 / 16 = 0.5625) */
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  margin-top: 0;
+}
+
+.card-content p {
+  margin-bottom: 0;
+}
+
+
+
+.phone {
+  position: relative;
+  width: 302px;
+  height: 626px;
+}
+
+.phone-video {
+/*   position: absolute;
+  top: 7px;
+  left: 8px; */
+  width: 305px;
+  height: 620px;
+  border: none;
+  clip-path:  inset(0% 3% 0% 3% round 36px);
+  /* clip-path: polygon(0 0px, 100% 0, 100% 100%, 0 100%); */
+  z-index: 0;
+}
+.card-content {
+  position: absolute;
+  bottom: 20px; /* Adjust bottom position of card content */
+  left: 20px; /* Adjust left position of card content */
+  color: white; /* Adjust text color */
+}
+
+.phone::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('http://localhost/[Drive-Calc]/core/iphone.png'); /* Replace with your phone frame image URL */
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 10; /* Ensure the frame is behind the video */
+}
+@media only screen and (max-width: 680px) {
+  .hero h1 {
+    font-size: 4rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+  }
